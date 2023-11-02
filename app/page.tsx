@@ -1,41 +1,37 @@
-import Navbar from "@/components/navbar/Navbar";
-
 export default function Home() {
+  const skills = [
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Contentful CMS",
+    "Tailwind CSS",
+  ];
   return (
-    <main className="">
-      <Navbar />
+    <section id="hero" className="text-slate-300 mx-20 mt-28">
+      <small className="font-bold">Hi, my name is</small>
+      <h1 className="font-black text-5xl">Frank Lam</h1>
+      <h3 className="font-bold text-xl">
+        I&apos;m a Software Engineer based in London
+      </h3>
+      <p className="w-1/2">
+        with 8 years of experience in the digital industry, I&apos;ve had the
+        opportunity to explore various roles. My career kicked off in Hong Kong,
+        where I began as a Business Analyst before making my way to London to
+        work as a Software Engineer...
+      </p>
 
-      <section id="hero" className="text-slate-300 p-10">
-        <h1 className="font-black text-5xl">Frank Lam</h1>
-        <h2 className="font-bold text-2xl">I&apos;m a Web Developer</h2>
-        <p className="w-1/2">
-          and a dedicated creator and perpetual learner. I have a genuine
-          affinity for crafting professional web applications, emphasizing
-          user-friendliness, efficiency, and visual appeal.
-        </p>
-      </section>
-
-      <section id="about" className="text-slate-300 p-10">
-        <h1 className="font-black text-5xl">About Me</h1>
-        <p className="w-1/2">summary about myself</p>
-
-        <p className="w-1/2">tech stack</p>
-      </section>
-
-      <section id="experience" className="text-slate-300 p-10">
-        <h1 className="font-black text-5xl">Experience</h1>
-        <p className="w-1/2">work experience</p>
-      </section>
-
-      <section id="projects" className="text-slate-300 p-10">
-        <h1 className="font-black text-5xl">Personal Projects</h1>
-        <p className="w-1/2">work</p>
-      </section>
-
-      <section id="contact" className="text-slate-300 p-10">
-        <h1 className="font-black text-5xl">Contact</h1>
-        <p className="w-1/2">Contact</p>
-      </section>
-    </main>
+      <small>main technologies that I use:</small>
+      <ul className="grid grid-cols-2 gap-y-1 md:grid-cols-2 md:gap-y-0 sm:gap-x-2 py-0 mt-5 list-none max-w-[400px]">
+        {skills &&
+          skills.map((skill, i) => (
+            <li key={i} className="relative mb-4 pl-6 font-mono text-xs">
+              <span className="absolute left-0 text-green text-sm">▹</span>
+              {skill}
+            </li>
+          ))}
+      </ul>
+    </section>
   );
 }
