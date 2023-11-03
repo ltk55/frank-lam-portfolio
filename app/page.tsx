@@ -9,13 +9,13 @@ export default function Home() {
     "Tailwind CSS",
   ];
   return (
-    <section id="hero" className="text-slate-300 mx-20 mt-28">
+    <section id="hero" className="text-slate-300 mx-10 md:mx-20 mt-24 md:mt-28">
       <small className="font-bold">Hi, my name is</small>
-      <h1 className="font-black text-5xl">Frank Lam</h1>
+      <h1 className="font-black text-5xl mt-2">Frank Lam</h1>
       <h3 className="font-bold text-xl">
         I&apos;m a Software Engineer based in London
       </h3>
-      <p className="w-1/2">
+      <p className="">
         with 8 years of experience in the digital industry, I&apos;ve had the
         opportunity to explore various roles. My career kicked off in Hong Kong,
         where I began as a Business Analyst before making my way to London to
