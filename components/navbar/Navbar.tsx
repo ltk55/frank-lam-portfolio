@@ -23,48 +23,20 @@ const navItems = {
   },
 };
 
-const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 100}px at 10px 10px)`,
-    transition: {
-      type: "spring",
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: "circle(10px at 10px 10px)",
-    transition: {
-      delay: 0.5,
-      type: "spring",
-      stiffness: 400,
-      damping: 40,
-    },
-  },
-};
-
-const variants = {
+const sidebarVariants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
-
-const livariants = {
-  open: {
-    y: 50,
+    y: 0,
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
     },
   },
   closed: {
-    y: 50,
-    opacity: 0,
+    y: -1000,
+    opacity: 1,
     transition: {
-      y: { stiffness: 1000 },
+      y: { stiffness: 1000, velocity: -1000 },
+      delay: 0.4,
     },
   },
 };
@@ -76,46 +48,45 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-slate-900 top-0 left-0 absolute flex w-full justify-between my-3 px-5">
-        <Link href="/" className="text-white">
+      <nav className="bg-slate-900 top-0 left-0 absolute flex w-full justify-between my-3 px-5 z-50">
+        <Link href="/" className="text-white z-50">
           <span className="font-black text-xl mr-4">FL</span>
           <span className="hidden md:inline-block">Software Engineer</span>
         </Link>
 
-        <div className="text-slate-50 hidden md:flex">
+        <ul className="text-slate-50 hidden md:flex">
           {Object.entries(navItems).map(([path, { name }]) => {
-            return <NavItem key={path} path={path} name={name} />;
+            return (
+              <NavItem key={path} path={path} name={name} layoutId="menu" />
+            );
           })}
-        </div>
+        </ul>
 
         <motion.div
           initial={false}
           animate={isOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
+          className="md:hidden"
         >
           <motion.div
-            className="fixed top-20 left-0 bottom-0 w-full bg-slate-500 md:hidden"
-            variants={sidebar}
-          />
-          {/* <motion.ul variants={variants} className="md:hidden">
-            <motion.li
-              variants={livariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white"
-            >
-              test
-            </motion.li>
-            <motion.li
-              variants={livariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-white"
-            >
-              test 2
-            </motion.li>
-          </motion.ul> */}
+            id="test"
+            className="fixed left-0 top-10 w-full bg-slate-900 z-20 flex flex-col items-center p-10 md:hidden"
+            variants={sidebarVariants}
+            onClick={() => toggleOpen()}
+          >
+            {Object.entries(navItems).map(([path, { name }]) => {
+              return (
+                <NavItem
+                  key={path}
+                  path={path}
+                  name={name}
+                  layoutId="slide-menu"
+                />
+              );
+            })}
+          </motion.div>
+
           <MenuToggle toggle={() => toggleOpen()} />
         </motion.div>
       </nav>

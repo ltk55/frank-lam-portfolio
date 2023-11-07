@@ -7,9 +7,11 @@ import { motion } from "framer-motion";
 export default function NavItem({
   path,
   name,
+  layoutId,
 }: {
   path: string;
   name: string;
+  layoutId: string;
 }) {
   let pathname = usePathname() || "/";
 
@@ -26,7 +28,7 @@ export default function NavItem({
         {isActive ? (
           <motion.div
             className="absolute h-[1px] top-7 mx-2 inset-0 bg-neutral-200 z-[-1] from-transparent to-neutral-900"
-            layoutId="sidebar"
+            layoutId={layoutId}
             transition={{
               type: "spring",
               stiffness: 350,

@@ -14,8 +14,8 @@ const Path = (
   />
 );
 
-export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle} className="md:hidden">
+export const MenuToggle = ({ toggle }: { toggle: () => void }) => (
+  <button onClick={toggle} className="md:hidden fixed top-4 right-4 z-50">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
