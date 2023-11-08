@@ -6,17 +6,16 @@ import Link from "next/link";
 
 import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
-import { useDimensions } from "@/lib/hooks/useDimensions";
 
 const navItems = {
   "/": {
     name: "home",
   },
-  "/resume": {
-    name: "resume",
+  "/experience": {
+    name: "experience",
   },
-  "/projects": {
-    name: "projects",
+  "/work": {
+    name: "work",
   },
   "/contact": {
     name: "contact",
@@ -44,7 +43,6 @@ const sidebarVariants = {
 export default function Navbar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
-  const { height } = useDimensions(containerRef);
 
   return (
     <>
@@ -65,7 +63,6 @@ export default function Navbar() {
         <motion.div
           initial={false}
           animate={isOpen ? "open" : "closed"}
-          custom={height}
           ref={containerRef}
           className="md:hidden"
         >
