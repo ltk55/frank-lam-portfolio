@@ -7,6 +7,9 @@ export default function Home() {
     "Node.js",
     "Contentful CMS",
     "Tailwind CSS",
+    "Framer Motion",
+    "Jest",
+    "React Testing Library",
   ];
   return (
     <section id="hero" className="text-slate-300 mx-10 md:mx-20 mt-24 md:mt-28">
@@ -15,7 +18,7 @@ export default function Home() {
       <h3 className="font-bold text-xl">
         I&apos;m a Software Engineer based in London
       </h3>
-      <p className="">
+      <p className="max-w-[700px]">
         with 8 years of experience in the digital industry, I&apos;ve had the
         opportunity to explore various roles. My career kicked off in Hong Kong,
         where I began as a Business Analyst before making my way to London to

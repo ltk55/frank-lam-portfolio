@@ -1,14 +1,14 @@
 import JobDesc from "./JobDesc";
 
-interface JobExp {
+interface JobDetails {
   company: string;
   jobTitle: string;
   duration: string;
   jobDescriptions: string[];
 }
 
-export default function JobDetails({ jobExp }: { jobExp: JobExp }) {
-  const { company, jobTitle, duration, jobDescriptions } = jobExp;
+export default function Job({ JobDetails }: { JobDetails: JobDetails }) {
+  const { company, jobTitle, duration, jobDescriptions } = JobDetails;
 
   return (
     <div className="flex flex-col md:flex-row py-5 gap-5">

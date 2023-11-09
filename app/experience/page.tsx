@@ -1,4 +1,4 @@
-import JobDetails from "@/components/JobDetails/JobDetails";
+import Job from "@/components/Job/Job";
 
 export default function Experience() {
   const jobExp = [
@@ -41,8 +41,8 @@ export default function Experience() {
         <h2 className="font-bold text-2xl">Download Full Résumé</h2>
       </div>
 
-      {jobExp.map((jobExp, i) => (
-        <JobDetails jobExp={jobExp} key={i} />
+      {jobExp.map((jobDetails, i) => (
+        <Job JobDetails={jobDetails} key={i} />
       ))}
     </section>
   );
