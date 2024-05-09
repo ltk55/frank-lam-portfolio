@@ -46,7 +46,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-slate-900 top-0 left-0 absolute flex w-full justify-between my-3 px-5 z-50">
+      <nav className="bg-slate-800 top-0 left-0 absolute flex w-full justify-between py-5 px-10 z-50">
         <Link href="/" className="text-white z-50">
           <span className="font-black text-xl mr-4">FL</span>
           <span className="hidden md:inline-block">Software Engineer</span>
@@ -68,7 +68,7 @@ export default function Navbar() {
         >
           <motion.div
             id="test"
-            className="fixed left-0 top-10 w-full bg-slate-900 z-20 flex flex-col items-center p-10 md:hidden"
+            className="fixed left-0 top-20 w-full bg-slate-900 z-20 flex flex-col items-center p-10 md:hidden"
             variants={sidebarVariants}
             onClick={() => toggleOpen()}
           >
