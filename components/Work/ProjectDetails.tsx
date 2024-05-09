@@ -1,9 +1,9 @@
 import Image from "next/image";
 import TechnologyList from "./TechnologyList";
-import IconGitHub from "../Icons/IconGithub";
+import IconGitHub from "../Icons/IconGitHub";
 import IconExternal from "../Icons/IconExternal";
 
-interface ProjectDetails {
+interface ProjectDetail {
   name: string;
   technologyList: string[];
   description: string;
@@ -12,36 +12,29 @@ interface ProjectDetails {
   imagePath: string;
 }
 
-export default function ProjectDetails({
-  projectList,
-}: {
-  projectList: ProjectDetails[];
-}) {
+interface Props {
+  projectList: ProjectDetail[];
+}
+
+const ProjectDetails: React.FC<Props> = ({ projectList }) => {
   return (
     <div className="py-5 gap-5 md:px-5 2xl:w-9/12">
       {projectList.map((project, i) => (
-        <div className="flex gap-16 py-5" key={i}>
-          <Image
-            className="hidden md:block"
-            src={project.imagePath}
-            alt={project.name}
-            width={600}
-            height={300}
-          />
-          <div>
-            <div className="text-xl mb-3 font-black">{project.name}</div>
+        <div className="flex flex-col lg:flex-row gap-5 py-5" key={i}>
+          <div className="mx-auto lg:w-600 lg:h-300 w-200 h-200">
             <Image
-              className="block md:hidden"
               src={project.imagePath}
               alt={project.name}
-              width={200}
-              height={200}
+              width={600}
+              height={300}
+              layout="responsive"
             />
+          </div>
+          <div className="flex flex-col items-center lg:items-start text-center gap-3 lg:text-start">
+            <div className="text-xl mb-3 font-black">{project.name}</div>
             <div className="text-sm">{project.description}</div>
-
             <TechnologyList technologyList={project.technologyList} />
-
-            <div className="flex gap-5 mt-5">
+            <div className="flex justify-center gap-5 mt-5 lg:mt-0">
               <IconGitHub href={project.githubURL} />
               <IconExternal href={project.liveURL} />
             </div>
@@ -50,4 +43,6 @@ export default function ProjectDetails({
       ))}
     </div>
   );
-}
+};
+
+export default ProjectDetails;

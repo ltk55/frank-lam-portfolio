@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import NavItem from "./NavItem";
 import Link from "next/link";
 
@@ -44,12 +44,24 @@ export default function Navbar() {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <nav className="bg-slate-800 top-0 left-0 absolute flex w-full justify-between py-5 px-10 z-50">
         <Link href="/" className="text-white z-50">
           <span className="font-black text-xl mr-4">FL</span>
-          <span className="hidden md:inline-block">Software Engineer</span>
         </Link>
 
         <ul className="text-slate-50 hidden md:flex">
