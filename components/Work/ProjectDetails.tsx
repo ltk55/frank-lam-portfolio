@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TechnologyList from "./TechnologyList";
-import IconGitHub from "../Icons/IconGitHub";
-import IconExternal from "../Icons/IconExternal";
+import IconGitHub from "@/components/Icons/IconGitHub";
+import IconExternal from "@/components/Icons/IconExternal";
 
 interface ProjectDetail {
   name: string;
