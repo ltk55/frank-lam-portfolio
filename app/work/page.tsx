@@ -13,10 +13,10 @@ export default function Work() {
         "React Hook Form",
       ],
       description:
-        "Create, read, update, and delete product feedback requests, Receive form validations when trying to create/edit feedback requests, Sort suggestions by most/least upvotes and most/least comments",
-      liveURL: "",
-      githubURL: "",
-      imagePath: "",
+        "Fully responsive product feedback app, developed for seamless interaction across all devices. This app allows users to view, filter, and sort product feedback, post their own insights, upvote other users' feedback and bring feedbacks into the product roadmap.",
+      liveURL: "https://product-feedback-app-pink.vercel.app/",
+      githubURL: "https://github.com/ltk55/product-feedback-app",
+      imagePath: "/images/product-feedback-home.png",
     },
     {
       name: "In-browser Markdown Editor",
@@ -25,18 +25,18 @@ export default function Work() {
         "Vite",
         "TypeScript",
         "Tailwind CSS",
-        "Zustand",
+        "React-toastify",
       ],
       description:
-        "Create, read, update, and delete product feedback requests, Receive form validations when trying to create/edit feedback requests, Sort suggestions by most/least upvotes and most/least comments",
-      liveURL: "",
-      githubURL: "",
-      imagePath: "",
+        "This markdown editor allows you to input Markdown syntax, which is instantly rendered on a split-screen for immediate preview. User can name, save, download and manage multiple documents directly within the app, with all data stored in browser's local storage.",
+      liveURL: "https://in-browser-markdown-editor-gray.vercel.app/",
+      githubURL: "https://github.com/ltk55/in-browser-markdown-editor",
+      imagePath: "/images/markdown-home.png",
     },
   ];
 
   return (
-    <section id="work" className="text-slate-300 px-10 pt-28">
+    <section id="work" className="text-slate-300 px-10 pt-28 md:px-28">
       <div className="pb-10 mb-10 border-b border-slate-100">
         <h1 className="font-black text-5xl">Featured projects</h1>
       </div>
