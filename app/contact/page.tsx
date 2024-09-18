@@ -1,46 +1,52 @@
+import IconEmail from "@/components/Icons/IconEmail";
+import IconGitHub from "@/components/Icons/IconGitHub";
+import IconLinkedIn from "@/components/Icons/IconLinkedIn";
+
 export default function Contact() {
   const contactList = [
     {
       platform: "Email",
       value: "mailto:frankltk55@gmail.com",
-    },
-    {
-      platform: "LinkedIn",
-      value: "https://www.linkedin.com/in/franklamltk55/", // Ensuring the URL is complete
+      icon: IconEmail,
+      color: "#cbd5e1",
     },
     {
       platform: "GitHub",
-      value: "https://github.com/ltk55", // Ensuring the URL is complete
+      value: "https://github.com/ltk55",
+      icon: IconGitHub,
+    },
+    {
+      platform: "LinkedIn",
+      value: "https://www.linkedin.com/in/franklamltk55/",
+      icon: IconLinkedIn,
     },
   ];
 
   return (
     <section
-      id="hero"
-      className="text-slate-300 flex items-center justify-center h-screen flex-col px-5"
+      id="contact"
+      className="text-slate-300 px-10 md:px-28 py-28 flex flex-col items-center md:items-start"
     >
-      <div className="pb-10 mb-10 border-b border-slate-100">
-        <h1 className="font-bold text-5xl text-center">Get in Touch</h1>
+      <div className="pb-10 mb-10 border-b border-slate-100 w-full md:text-left text-center">
+        <h1 className="font-bold text-5xl">Get in Touch</h1>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 justify-center items-center">
-        {contactList.map((contact, index) => (
-          <div key={index} className="text-center">
-            <h3 className="text-xl font-semibold">{contact.platform}</h3>
-            <a
-              href={contact.value}
-              className="text-sm text-slate-500 hover:text-blue-500 transition duration-300"
-              aria-label={`Contact via ${contact.platform}`}
-              target={contact.platform !== "Email" ? "_blank" : undefined}
-              rel={
-                contact.platform !== "Email" ? "noopener noreferrer" : undefined
-              }
-            >
-              {contact.platform === "Email"
-                ? contact.value.substring(7) // Strip 'mailto:'
-                : contact.value}
-            </a>
-          </div>
+      <p className="mb-10 text-lg font-light text-center md:text-left">
+        I’d love to hear from you 👋 Whether you have a question, want to
+        discuss a project, job opportunity, or just want to connect, feel free
+        to reach out through any of the platforms below.
+      </p>
+
+      <div className="flex gap-6 justify-center md:justify-start">
+        {contactList.map(({ platform, value, icon: IconComponent, color }) => (
+          <IconComponent
+            key={platform}
+            href={value}
+            className="flex-col hover:brightness-125 transition duration-300"
+            color={color}
+          >
+            <div className="text-sm font-semibold font-mono">{platform}</div>
+          </IconComponent>
         ))}
       </div>
     </section>

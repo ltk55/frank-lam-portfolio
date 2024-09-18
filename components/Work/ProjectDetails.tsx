@@ -35,8 +35,12 @@ const ProjectDetails: React.FC<Props> = ({ projectList }) => {
             <div className="text-sm">{project.description}</div>
             <TechnologyList technologyList={project.technologyList} />
             <div className="flex justify-center gap-5 mt-5 lg:mt-0">
-              <IconGitHub href={project.githubURL} />
-              <IconExternal href={project.liveURL} />
+              <IconGitHub href={project.githubURL}>
+                <div className="font-mono">GitHub</div>
+              </IconGitHub>
+              <IconExternal href={project.liveURL}>
+                <div className="font-mono">Live</div>
+              </IconExternal>
             </div>
           </div>
         </div>

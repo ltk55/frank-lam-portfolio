@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <section
       id="hero"
-      className="text-slate-300 flex justify-center h-screen mt-28"
+      className="text-slate-300 flex justify-center mt-28 md:mt-40"
     >
       <div className="flex flex-col items-start w-full max-w-[700px] px-6 md:px-0">
         <small className="font-semibold mb-1 text-slate-400">
