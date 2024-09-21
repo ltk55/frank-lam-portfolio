@@ -21,7 +21,7 @@ export default function NavItem({
     <Link
       key={path}
       href={path}
-      className="transition-all hover:text-neutral-200 flex align-middle"
+      className="hover:text-neutral-200 flex align-middle hover:brightness-150 transition duration-300"
     >
       <span className="relative py-1 px-2 text-slate-300">
         {name}
