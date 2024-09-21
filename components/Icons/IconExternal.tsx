@@ -13,7 +13,7 @@ export default function IconExternal({
   return (
     <a
       href={href}
-      aria-label="GitHub Link"
+      aria-label="External Link"
       target="_blank"
       rel="noopener noreferrer"
       className={clsx("flex gap-2 items-center", className)}
@@ -23,7 +23,7 @@ export default function IconExternal({
         role="img"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#fff"
+        stroke="#cbd5e1"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

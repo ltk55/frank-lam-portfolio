@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 
-export default function IconGitHub({
+export default function IconLinkedIn({
   href,
   children,
   className = "",
@@ -13,7 +13,7 @@ export default function IconGitHub({
   return (
     <a
       href={href}
-      aria-label="GitHub Link"
+      aria-label="LinkedIn Link"
       target="_blank"
       rel="noopener noreferrer"
       className={clsx("flex gap-2 items-center", className)}
