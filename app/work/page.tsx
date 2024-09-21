@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import ProjectDetails from "@/components/Work/ProjectDetails";
 
 export default function Work() {
@@ -13,7 +16,7 @@ export default function Work() {
         "React Hook Form",
       ],
       description:
-        "Fully responsive product feedback app, developed for seamless interaction across all devices. This app allows users to view, filter, and sort product feedback, post their own insights, upvote other users' feedback and bring feedbacks into the product roadmap.",
+        "Fully responsive product feedback app, developed for seamless interaction across all devices...",
       liveURL: "https://product-feedback-app-pink.vercel.app/",
       githubURL: "https://github.com/ltk55/product-feedback-app",
       imagePath: "/images/product-feedback-home.png",
@@ -28,20 +31,47 @@ export default function Work() {
         "React-toastify",
       ],
       description:
-        "This markdown editor allows you to input Markdown syntax, which is instantly rendered on a split-screen for immediate preview. User can name, save, download and manage multiple documents directly within the app, with all data stored in browser's local storage.",
+        "This markdown editor allows you to input Markdown syntax, which is instantly rendered...",
       liveURL: "https://in-browser-markdown-editor-gray.vercel.app/",
       githubURL: "https://github.com/ltk55/in-browser-markdown-editor",
       imagePath: "/images/markdown-home.png",
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <section id="work" className="text-slate-300 px-10 pt-28 md:px-28">
+    <motion.section
+      id="work"
+      className="text-slate-300 px-10 pt-28 md:px-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
       <div className="pb-10 mb-10 border-b border-slate-100">
-        <h1 className="font-black text-5xl">Featured projects</h1>
+        <h1 className="font-black text-5xl">Featured Projects</h1>
       </div>
 
-      <ProjectDetails projectList={projectList} />
-    </section>
+      <motion.div variants={containerVariants}>
+        {projectList.map((project, i) => (
+          <div key={i} className="mb-10">
+            <ProjectDetails projectList={[project]} />
+          </div>
+        ))}
+      </motion.div>
+    </motion.section>
   );
 }

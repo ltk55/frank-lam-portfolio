@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Job from "@/components/Job/Job";
 
 export default function Experience() {
@@ -5,7 +8,7 @@ export default function Experience() {
     {
       company: "Sopra Steria",
       jobTitle: "Software Engineer",
-      duration: "Nov 2021 - Present",
+      duration: "Nov 2021 - Aug 2024",
       jobDescriptions: [
         "Next.js Web App Development: Developed a responsive web application for an energy company, enhancing the customer quoting journey using Next.js, which significantly improved user experience and interaction rates. Engineered comprehensive test suites using Jest and React Testing Library to ensure product quality.",
         "Agile Collaboration: Collaborated closely with UX/UI designers and backend developers to ensure seamless integration of front-end elements with server-side logic. Worked in a cross-functional team through the agile development process, ensuring efficient workflows and timely delivery of features.",
@@ -34,9 +37,29 @@ export default function Experience() {
       ],
     },
   ];
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
   return (
-    <section id="resume" className="text-slate-300 px-10 md:px-28 pt-28">
+    <motion.section
+      id="resume"
+      className="text-slate-300 px-10 md:px-28 py-28"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+    >
       <div className="pb-10 mb-10 border-b border-slate-100">
         <h1 className="font-black text-5xl">Experience</h1>
       </div>
@@ -44,6 +67,6 @@ export default function Experience() {
       {jobExp.map((jobDetails, i) => (
         <Job JobDetails={jobDetails} key={i} />
       ))}
-    </section>
+    </motion.section>
   );
 }
