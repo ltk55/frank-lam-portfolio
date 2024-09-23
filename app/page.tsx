@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Frank Lam | Home";
+  });
+
   const skills = [
     "JavaScript (ES6+)",
     "TypeScript",
@@ -74,7 +79,7 @@ export default function Home() {
         </motion.h3>
 
         <motion.p className="my-2 text-slate-400" variants={itemVariants}>
-          With five years of web development experience, I specialize in
+          With five years of web development experience, I specialise in
           creating intuitive and responsive user interfaces. I am adept at
           transforming complex project requirements into engaging, efficient
           digital solutions. Dedicated to continuous learning, I strive to stay

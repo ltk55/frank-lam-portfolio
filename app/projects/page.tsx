@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import ProjectDetails from "@/components/Work/ProjectDetails";
+import { useEffect } from "react";
 
 export default function Work() {
+  useEffect(() => {
+    document.title = "Frank Lam | Projects";
+  });
+
   const projectList = [
     {
       name: "Invoice App",

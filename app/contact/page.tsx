@@ -5,8 +5,13 @@ import IconEmail from "@/components/Icons/IconEmail";
 import IconGitHub from "@/components/Icons/IconGitHub";
 import IconLinkedIn from "@/components/Icons/IconLinkedIn";
 import IconHashnode from "@/components/Icons/IconHashnode";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Frank Lam | Contact";
+  });
+
   const contactList = [
     {
       platform: "Email",

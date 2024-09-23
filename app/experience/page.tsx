@@ -1,9 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Job from "@/components/Job/Job";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Experience() {
+  useEffect(() => {
+    document.title = "Frank Lam | Experience";
+  });
+
   const jobExp = [
     {
       company: "Sopra Steria",
@@ -13,7 +18,7 @@ export default function Experience() {
         "Next.js Web App Development: Developed a responsive web application for an energy company, enhancing the customer quoting journey using Next.js, which significantly improved user experience and interaction rates. Engineered comprehensive test suites using Jest and React Testing Library to ensure product quality.",
         "Agile Collaboration: Collaborated closely with UX/UI designers and backend developers to ensure seamless integration of front-end elements with server-side logic. Worked in a cross-functional team through the agile development process, ensuring efficient workflows and timely delivery of features.",
         "Data Visualization: Led the development of a web application for visualizing geospatial data for EV charging infrastructure, integrating Mapbox and Plotly API to provide advanced analytical capabilities on interactive maps, greatly enhancing data usability for strategic decision-making.",
-        "Power Platform Automation: Utilized Microsoft Power Platform to develop web applications and automate cloud flows, enabling employees to efficiently manage their CVs for the internal resourcing team, significantly reducing manual processing time and increasing resource allocation efficiency.",
+        "Power Platform Automation: Utilised Microsoft Power Platform to develop web applications and automate cloud flows, enabling employees to efficiently manage their CVs for the internal resourcing team, significantly reducing manual processing time and increasing resource allocation efficiency.",
       ],
     },
     {
@@ -32,7 +37,7 @@ export default function Experience() {
       duration: "Aug 2015 - Apr 2017",
       jobDescriptions: [
         "System Implementation Expertise: Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and the creation of SQL scripts, views, and stored procedures, which resulted in a 30% increase in operational efficiency during data migration and reporting.",
-        "Integration Oversight: Oversaw system integrations, including both application and data integration, which optimized processes and reduced redundancy in data handling.",
+        "Integration Oversight: Oversaw system integrations, including both application and data integration, which optimised processes and reduced redundancy in data handling.",
         "User Story Refinement: Iteratively refined user stories with development teams to ensure precise implementation of features, aligning closely with evolving business requirements and stakeholder expectations.",
       ],
     },
