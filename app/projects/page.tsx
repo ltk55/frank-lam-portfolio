@@ -48,7 +48,7 @@ export default function Work() {
       technologyList: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       description:
         "This fully responsive portfolio website showcases my work and technical skills in a clean, modern design. The site includes smooth animations powered by Framer Motion to enhance user experience.",
-      liveURL: "franklam.vercel.app",
+      liveURL: "https://franklam.vercel.app",
       githubURL: "https://github.com/ltk55/frank-lam-portfolio",
       imagePath: "/images/portfolio-home.png",
     },
