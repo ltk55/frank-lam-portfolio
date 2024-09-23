@@ -9,7 +9,7 @@ import { MenuToggle } from "./MenuToggle";
 const navItems = {
   "/": { name: "home" },
   "/experience": { name: "experience" },
-  "/work": { name: "work" },
+  "/projects": { name: "projects" },
   "/contact": { name: "contact" },
 };
 

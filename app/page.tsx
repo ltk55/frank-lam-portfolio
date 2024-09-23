@@ -96,7 +96,7 @@ export default function Home() {
                 key={i}
                 className="relative mb-3 pl-6 font-mono text-xs"
                 variants={itemVariants}
-                whileHover={{ scale: 1.05, color: "#22c55e" }} // Hover effect
+                whileHover={{ scale: 1.05 }}
               >
                 <span className="absolute left-0 text-green text-sm">▹</span>
                 {skill}

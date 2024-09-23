@@ -21,7 +21,10 @@ function ProjectDetails({ projectList }: { projectList: ProjectDetail[] }) {
           { name, technologyList, description, liveURL, githubURL, imagePath },
           i
         ) => (
-          <div className="flex flex-col lg:flex-row gap-5 py-5" key={i}>
+          <div
+            className="flex flex-col lg:flex-row gap-5 lg:gap-12 py-5"
+            key={i}
+          >
             <div className="mx-auto lg:w-600 lg:h-300 w-200 h-200">
               <Image
                 src={imagePath}
@@ -31,8 +34,8 @@ function ProjectDetails({ projectList }: { projectList: ProjectDetail[] }) {
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col items-center lg:items-start text-center gap-3 lg:text-start">
-              <div className="text-xl mb-3 font-black">{name}</div>
+            <div className="flex flex-col items-center lg:items-start text-center gap-3 lg:text-start lg:w-1/2">
+              <div className="text-2xl mb-3 font-black">{name}</div>
               <div className="text-sm">{description}</div>
               <TechnologyList technologyList={technologyList} />
               <div className="flex justify-center gap-5 mt-5 lg:mt-0">
