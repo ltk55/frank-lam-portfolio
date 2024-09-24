@@ -31,7 +31,7 @@ export default function Contact() {
     },
     {
       platform: "Hashnode",
-      value: "https://lkt55.hashnode.dev/",
+      value: "https://franklam.hashnode.dev/",
       icon: IconHashnode,
     },
   ];
