@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     document.title = "Frank Lam | Home";
-  });
+  }, []);
 
   const skills = [
     "JavaScript (ES6+)",
@@ -21,15 +21,19 @@ export default function Home() {
     "React Testing Library",
   ];
 
+  const sharedTransition = {
+    type: "spring",
+    stiffness: 100,
+    damping: 20,
+  };
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
+        ...sharedTransition,
         delay: 0.2,
         staggerChildren: 0.1,
       },
@@ -41,11 +45,7 @@ export default function Home() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-      },
+      transition: sharedTransition,
     },
   };
 
@@ -64,7 +64,7 @@ export default function Home() {
           className="font-semibold mb-1 text-slate-400"
           variants={itemVariants}
         >
-          Hi, my name is
+          Hey there! my name is
         </motion.small>
 
         <motion.h1 className="font-black text-5xl my-1" variants={itemVariants}>
@@ -78,35 +78,34 @@ export default function Home() {
           I&apos;m a Software Engineer / Web Developer based in London
         </motion.h3>
 
-        <motion.p className="my-2 text-slate-400" variants={itemVariants}>
-          With five years of web development experience, I specialise in
-          creating intuitive and responsive user interfaces. I am adept at
-          transforming complex project requirements into engaging, efficient
-          digital solutions. Dedicated to continuous learning, I strive to stay
-          at the forefront of web technology trends to enhance user experiences
-          and meet strategic business goals.
+        <motion.p className="mt-2 mb-4 text-slate-400" variants={itemVariants}>
+          I love bringing ideas to life online. I craft user-friendly and
+          responsive websites that make complex things simple and engaging.
+          Whether it’s solving tricky problems or adding that extra touch of
+          flair, I’m all about creating digital experiences that stand out. I’m
+          always picking up new skills and techniques to keep things fresh and
+          interesting.
         </motion.p>
 
         <motion.small className="mt-2" variants={itemVariants}>
-          Technologies I specialise In:
+          Technologies I specialize in:
         </motion.small>
 
         <motion.ul
           className="grid grid-cols-2 gap-y-1 md:grid-cols-2 md:gap-y-0 sm:gap-x-2 py-0 mt-3 list-none"
           variants={containerVariants}
         >
-          {skills &&
-            skills.map((skill, i) => (
-              <motion.li
-                key={i}
-                className="relative mb-3 pl-6 font-mono text-xs"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="absolute left-0 text-green text-sm">▹</span>
-                {skill}
-              </motion.li>
-            ))}
+          {skills.map((skill, i) => (
+            <motion.li
+              key={i}
+              className="relative mb-3 pl-6 font-mono text-xs"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="absolute left-0 text-green text-sm">▹</span>
+              {skill}
+            </motion.li>
+          ))}
         </motion.ul>
       </motion.div>
     </section>
