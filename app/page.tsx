@@ -15,8 +15,8 @@ export default function Home() {
     "Next.js",
     "Node.js",
     "SQL",
+    "GraphQL",
     "Tailwind CSS",
-    "Framer Motion",
     "Jest",
     "React Testing Library",
   ];
