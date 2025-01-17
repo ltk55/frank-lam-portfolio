@@ -9,16 +9,14 @@ export default function Home() {
   }, []);
 
   const skills = [
-    "JavaScript (ES6+)",
-    "TypeScript",
     "React",
     "Next.js",
+    "JavaScript (ES6+)",
+    "TypeScript",
     "Node.js",
-    "SQL",
-    "GraphQL",
+    "HTML5",
+    "CSS3",
     "Tailwind CSS",
-    "Jest",
-    "React Testing Library",
   ];
 
   const sharedTransition = {
@@ -88,7 +86,7 @@ export default function Home() {
         </motion.p>
 
         <motion.small className="mt-2" variants={itemVariants}>
-          Technologies I specialize in:
+          Technologies I specialise in:
         </motion.small>
 
         <motion.ul
