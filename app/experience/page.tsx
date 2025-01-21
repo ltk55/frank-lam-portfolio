@@ -15,10 +15,9 @@ export default function Experience() {
       jobTitle: "Software Engineer",
       duration: "Nov 2021 - Aug 2024",
       jobDescriptions: [
-        "Next.js Web App Development: Developed a responsive web application for an energy company, enhancing the customer quoting journey using Next.js, which significantly improved user experience and interaction rates. Engineered comprehensive test suites using Jest and React Testing Library to ensure product quality.",
-        "Agile Collaboration: Collaborated closely with UX/UI designers and backend developers to ensure seamless integration of front-end elements with server-side logic. Worked in a cross-functional team through the agile development process, ensuring efficient workflows and timely delivery of features.",
-        "Data Visualization: Led the development of a web application for visualizing geospatial data for EV charging infrastructure, integrating Mapbox and Plotly API to provide advanced analytical capabilities on interactive maps, greatly enhancing data usability for strategic decision-making.",
-        "Power Platform Automation: Utilised Microsoft Power Platform to develop web applications and automate cloud flows, enabling employees to efficiently manage their CVs for the internal resourcing team, significantly reducing manual processing time and increasing resource allocation efficiency.",
+        "Designed and implemented a responsive Next.js web application for a leading UK-based, energy provider, streamlining the customer quoting journey, resulting in a 20% increase in user interaction rates and improved overall customer satisfaction.",
+        "Partnered with UX/UI designers and backend teams to deliver cohesive, user-centric interfaces by integrating front-end elements with server-side logic. Played a pivotal role in cross-functional Agile teams, driving efficient workflows and consistently meeting delivery deadlines.",
+        "Spearheaded the development of a geospatial data visualization web application for EV charging infrastructure. Delivered insights that improved strategic decision-making for stakeholders and enhanced data accessibility.",
       ],
     },
     {
@@ -26,19 +25,19 @@ export default function Experience() {
       jobTitle: "Business Analyst",
       duration: "Sep 2017 - Feb 2021",
       jobDescriptions: [
-        "Module Development Leadership: Spearheaded the development of an Expense Reimbursement module using Vue.js as part of the company's HRMS enhancements, involving workflow and database schema design, which streamlined the expense reimbursement and approval process, increasing user satisfaction by 25%.",
-        "Stakeholder Engagement: Conducted in-depth stakeholder engagements to gather and define HRMS requirements, translating business needs into detailed product specifications that guided the development team.",
-        "Cross-Regional Collaboration: Facilitated cross-regional collaboration with consultants and developers in multiple regions, adapting the HRMS to meet regional operational requirements and compliance standards.",
+        "Spearheaded the development of an Expense Reimbursement module using Vue.js as part of the company's HRMS enhancements, involving workflow and database schema design.",
+        "Facilitated cross-regional collaboration with consultants and developers in multiple regions, adapting the HRMS to meet regional operational requirements and compliance standards.",
+        "Engaged with stakeholders to define HRMS requirements, translating business needs into detailed product specifications.",
       ],
     },
     {
       company: "MRC (HRMS) Limited",
-      jobTitle: "Project Consultant",
+      jobTitle: "Technical Consultant",
       duration: "Aug 2015 - Apr 2017",
       jobDescriptions: [
-        "System Implementation Expertise: Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and the creation of SQL scripts, views, and stored procedures, which resulted in a 30% increase in operational efficiency during data migration and reporting.",
-        "Integration Oversight: Oversaw system integrations, including both application and data integration, which optimised processes and reduced redundancy in data handling.",
-        "User Story Refinement: Iteratively refined user stories with development teams to ensure precise implementation of features, aligning closely with evolving business requirements and stakeholder expectations.",
+        "Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and SQL scriping which resulted in a 30% increase in operational efficiency during data migration and reporting.",
+        "Oversaw system integrations, including both application and data integration, which optimised processes and reduced redundancy in data handling.",
+        "Refined user stories with development teams to ensure precise implementation of features, aligning closely with evolving business requirements and stakeholder expectations.",
       ],
     },
   ];
