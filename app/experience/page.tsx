@@ -22,7 +22,7 @@ export default function Experience() {
     },
     {
       company: "Computer And Technologies Holdings Limited",
-      jobTitle: "Business Analyst",
+      jobTitle: "Business Analyst (Software Development)",
       duration: "Sep 2017 - Feb 2021",
       jobDescriptions: [
         "Spearheaded the development of an Expense Reimbursement module using Vue.js as part of the company's HRMS enhancements, involving workflow and database schema design.",
@@ -32,7 +32,7 @@ export default function Experience() {
     },
     {
       company: "MRC (HRMS) Limited",
-      jobTitle: "Technical Consultant",
+      jobTitle: "Project Consultant",
       duration: "Aug 2015 - Apr 2017",
       jobDescriptions: [
         "Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and SQL scriping which resulted in a 30% increase in operational efficiency during data migration and reporting.",
