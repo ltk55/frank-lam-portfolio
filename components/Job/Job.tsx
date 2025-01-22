@@ -31,9 +31,9 @@ export default function Job({ JobDetails }: { JobDetails: JobDetails }) {
       className="flex flex-col lg:flex-row py-5 gap-5 lg:px-5"
       variants={jobVariants}
     >
-      <div className="min-w-[250px]">
-        <div className="text-xl font-bold">{jobTitle}</div>
-        <h3 className="font-light">{company}</h3>
+      <div className="min-w-[350px]">
+        <div className="text-xl font-bold max-w-[250px]">{jobTitle}</div>
+        <h3 className="font-light ">{company}</h3>
         <small className="text-xs">{duration}</small>
       </div>
 
