@@ -15,9 +15,9 @@ export default function Experience() {
       jobTitle: "Software Engineer",
       duration: "Nov 2021 - Aug 2024",
       jobDescriptions: [
-        "Designed and implemented a responsive Next.js web application for a leading UK-based, energy provider, streamlining the customer quoting journey, resulting in a 20% increase in user interaction rates and improved overall customer satisfaction.",
-        "Partnered with UX/UI designers and backend teams to deliver cohesive, user-centric interfaces by integrating front-end elements with server-side logic. Played a pivotal role in cross-functional Agile teams, driving efficient workflows and consistently meeting delivery deadlines.",
-        "Spearheaded the development of a geospatial data visualization web application for EV charging infrastructure. Delivered insights that improved strategic decision-making for stakeholders and enhanced data accessibility.",
+        "Designed and implemented a responsive Next.js web application for a leading UK-based energy provider, streamlining customer quoting journey, resulting in a 20% increase in user interaction rates and improved overall customer satisfaction.",
+        "Partnered with UX/UI designers and backend teams to deliver cohesive, user-centric interfaces by integrating front-end elements with server-side logic. Consistently ensured timely delivery within Agile sprints, meeting or exceeding project milestones.",
+        "Advocated for performance and accessibility enhancements, resulting in a 20% reduction in page load times, a 15% drop in bounce rates, and a more inclusive user experience.",
       ],
     },
     {
@@ -35,7 +35,7 @@ export default function Experience() {
       jobTitle: "Project Consultant",
       duration: "Aug 2015 - Apr 2017",
       jobDescriptions: [
-        "Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and SQL scriping which resulted in a 30% increase in operational efficiency during data migration and reporting.",
+        "Managed the implementation and enhancements of HRMS for over 20 companies, involving detailed requirement analysis, data mapping, and SQL scripting which resulted in a 30% increase in operational efficiency during data migration and reporting.",
         "Oversaw system integrations, including both application and data integration, which optimised processes and reduced redundancy in data handling.",
         "Refined user stories with development teams to ensure precise implementation of features, aligning closely with evolving business requirements and stakeholder expectations.",
       ],
